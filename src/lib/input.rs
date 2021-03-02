@@ -4,11 +4,12 @@ use std::num::ParseIntError;
 pub type IntersectionID = usize;
 pub type CarID = usize;
 
-struct Street {
-    starts_in: IntersectionID,
-    ends_in: IntersectionID,
-    name: String,
-    length: usize,
+#[derive(Debug, Clone)]
+pub struct Street {
+    pub(crate) starts_in: IntersectionID,
+    pub(crate) ends_in: IntersectionID,
+    pub(crate) name: String,
+    pub(crate) length: usize,
 }
 
 #[derive(Debug)]
@@ -49,10 +50,10 @@ impl FromStr for Car {
     }
 }
 
-struct Problem {
+pub struct Problem {
     simulation_time: usize,
     intersection_count: usize,
-    streets: Vec<Street>,
+    pub(crate) streets: Vec<Street>,
     cars: Vec<Car>,
     reaching_destination_bonus: usize,
 }

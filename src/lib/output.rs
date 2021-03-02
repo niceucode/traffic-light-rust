@@ -1,17 +1,18 @@
 use std::fmt;
 use crate::lib::input::IntersectionID;
 
-struct StreetSchedule {
-    name: String,
-    green_time: usize,
-}
-struct IntersectionSchedule {
-    id: IntersectionID,
-    schedules: Vec<StreetSchedule>,
+pub struct StreetSchedule {
+    pub(crate) name: String,
+    pub(crate) green_time: usize,
 }
 
-struct Submission {
-    intersections: Vec<IntersectionSchedule>,
+pub struct IntersectionSchedule {
+    pub(crate) id: IntersectionID,
+    pub(crate) schedules: Vec<StreetSchedule>,
+}
+
+pub struct Submission {
+    pub(crate) intersections: Vec<IntersectionSchedule>,
 }
 
 impl fmt::Display for Submission {

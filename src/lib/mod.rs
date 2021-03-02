@@ -1,2 +1,3 @@
-mod input;
-mod output;
+pub mod input;
+pub mod output;
+pub mod solutions;
