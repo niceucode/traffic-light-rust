@@ -1,8 +1,8 @@
 use std::str::FromStr;
 use std::num::ParseIntError;
 
-type IntersectionID = usize;
-type CarID = usize;
+pub type IntersectionID = usize;
+pub type CarID = usize;
 
 struct Street {
     starts_in: IntersectionID,
@@ -112,7 +112,7 @@ impl FromStr for Problem {
 #[cfg(test)]
 mod tests {
     use std::str::FromStr;
-    use crate::lib::io::Problem;
+    use crate::lib::input::Problem;
 
     #[test]
     fn example_problem_parsing() {

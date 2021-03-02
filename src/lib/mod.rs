@@ -1,1 +1,2 @@
-mod io;
+mod input;
+mod output;
